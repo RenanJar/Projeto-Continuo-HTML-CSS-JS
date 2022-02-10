@@ -78,13 +78,6 @@ a{
     left: 13px;
 }
 
-
-
-
-
-
-
-
 .grid{
     margin: auto;
     margin-top: 20px;
@@ -181,7 +174,90 @@ a{
     grid-row: span 1;
 }
 
-footer{
+@media(max-width:650px){
+
+    .cabecalho{
+        flex-wrap: wrap;
+    }
+
+    .cabecalho .botao{
+        display:none;
+    }
+
+    .cabecalho a{
+        font-size: 0,2rem;
+
+    }
+
+    .grid-capa{
+        display: grid;
+        margin: auto;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas: "A" "b" "c" "d" "e" "f" "g" "h";
+        gap: 10px;
+        background-image: url("../img/teste.jpg");
+    
+    }
+    .a{grid-area: A;
+
+    }  
+    
+    .b{grid-area: b;
+
+    } 
+
+    .c{grid-area: c;
+
+    } 
+
+    .d{grid-area: d;
+
+    } 
+
+    .e{grid-area: e;
+
+    } 
+
+    .f{grid-area: f;
+
+    } 
+
+    .g{grid-area: g;
+
+    } 
+    .h{grid-area: h;
+
+    } 
+
+
+    .texto p{
+        position: absolute;
+        margin-top:50%;
+        margin-left: 5%;
+        margin-right: 5%;
+        transform: translate(0, -50%)
+    }
+
+    .duascolunas{
+        grid-column: span 1;
+        background-color: bisque;
+        
+    }
+
+    .footer{
+        flex-wrap: wrap;
+    }
+
+    .tamanhoobj{
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+    }
+
+}
+
+.footer{
     background-color: black;
     display: flex;
     justify-content:center;
@@ -194,3 +270,40 @@ footer{
     height: 50px;
     padding: 10px;
 }
+
+
+.boxmaior{
+    display: grid;
+    background-image: url(../img/paisagemlogin.jpg);
+    background-position: cover;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+}
+
+.boxesquerda{
+    background-color: ffd23f;
+    background-repeat: no-repeat;
+
+}
+
+.boxdireita{
+    display:flex;
+    justify-content:center ;
+    justify-items: center;
+    grid-column: span 2;
+    position: relative;
+    
+}
+
+.boxdireita .arealogin{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.623);
+    position: absolute;
+    margin-top: 20%;
+    width: 40%;
+    height: 60%;
+    
+    
+    
+}
+
