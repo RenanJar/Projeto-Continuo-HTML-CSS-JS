@@ -1,0 +1,12 @@
+
+.btn-outline-primary{color:#5A189A;border-color:#5A189A}
+
+
+.btn-outline-primary:hover{
+    color:#fff;background-color:#5A189A;border-color:#5A189A
+}
+
+.btn-outline-primary:focus{box-shadow:0 0 0 .10rem #59189abd}
+.btn-outline-danger:focus{box-shadow:0 0 0 .10rem}
+.btn-group-sm>.btn, .btn-sm {
+    border-radius: 10px 3px 10px 3px;}
