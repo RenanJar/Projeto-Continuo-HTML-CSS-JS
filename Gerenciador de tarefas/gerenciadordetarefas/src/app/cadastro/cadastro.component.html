@@ -6,23 +6,20 @@
             <h2 class="bi bi-columns-gap text-center"><span class="px-2"></span>Gen Tasks</h2>
         </div>
         <div class="form-group d-flex justify-content-center mt-5 ">
-            <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuario">
+            <input [(ngModel)]='Usuario.nome' class="form-control" type="text" name="Nome" id="Nome" placeholder="Nome">
+        </div>
+        <div class="form-group d-flex justify-content-center mt-5 ">
+            <input [(ngModel)]='Usuario.usuario' class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuario">
         </div>
         <div class="form-group d-flex justify-content-center mt-4 ">
-            <input class="form-control " type="password" name="usuario" id="e-mail" placeholder="E-mail">
+            <input  (input)='confirmSenha($event)' class="form-control " type="password" name="senha" id="senha" placeholder="Senha">
         </div>
         <div class="form-group d-flex justify-content-center mt-4 ">
-            <input class="form-control " type="password" name="usuario" id="e-mail" placeholder="Confirmar e-mail">
-        </div>
-        <div class="form-group d-flex justify-content-center mt-4 ">
-            <input class="form-control " type="password" name="usuario" id="senha" placeholder="Senha">
-        </div>
-        <div class="form-group d-flex justify-content-center mt-4 ">
-            <input class="form-control " type="password" name="usuario" id="senha" placeholder="Confirmar senha">
+            <input [(ngModel)]='Usuario.senha' class="form-control " type="password" name="senha" id="senha" placeholder="Confirmar senha">
         </div>
 
         <div class="form-group d-flex justify-content-center mt-4 ">
-            <select class="form-control2" name="tipo" id="tipo">
+            <select class="form-control2" name="tipo" id="tipo"(change)='tipoUsuario($event)'>
                 <option>Tipo de usuario</option>
                 <option value="normal">Normal</option>
                 <option value="adm">Administrador</option>
@@ -30,7 +27,7 @@
         </div>
 
         <div class="d-flex justify-content-center mt-5">
-            <button type="submit" class="btn btn-outline-primary btn-sm buton">
+            <button type="submit" class="btn btn-outline-primary btn-sm buton" (click)='cadastrar()'>
                 Cadastrar
             </button>
         </div>
