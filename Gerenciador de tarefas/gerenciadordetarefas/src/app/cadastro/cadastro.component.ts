@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -24,17 +25,16 @@ export class CadastroComponent implements OnInit {
   }
 
   confirmSenha(event:any){
-    this.confirmarSenha= event.targe.value
+    this.confirmarSenha= event.target.value
   }
 
   tipoUsuario(event:any){
-    this.tipoUsuario= event.targe.value
+    this.tipoUsuario= event.target.value
   }
 
-  Cadastrar(){
+  cadastrar(){
 
     this.Usuario.tipo = "o"
-
     if(this.Usuario.senha!= this.confirmarSenha){
       alert(' A senhas estão incorretas.')
     }else{
@@ -46,5 +46,6 @@ export class CadastroComponent implements OnInit {
     }
 
   }
+  
 
 }
