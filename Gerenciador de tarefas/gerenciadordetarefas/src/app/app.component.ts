@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import  {  faCoffee  }  from '@fortawesome/free-solid-svg-icons' ;
+import { AuthService } from './service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,8 @@ import  {  faCoffee  }  from '@fortawesome/free-solid-svg-icons' ;
 export class AppComponent {
   title = 'gerenciadordetarefas';
   faCoffee = faCoffee;
+
+  constructor(
+    public auth: AuthService
+  ){}
 }
