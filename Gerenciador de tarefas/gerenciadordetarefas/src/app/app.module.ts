@@ -11,7 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { StatusComponent } from './status/status.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CabecalhoComponent,
     LoginComponent,
     CadastroComponent,
-    DashboardComponent
+    DashboardComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

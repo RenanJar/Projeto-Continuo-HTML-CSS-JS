@@ -10,12 +10,12 @@ import { environment } from 'src/environments/environment.prod';
 export class DashboardComponent implements OnInit {
 
   constructor(private router: Router
+    
     ) { }
 
   ngOnInit() {
 
     if(environment.token == ''){
-      alert('Sua seção expirou,m faça o login novamente')
       this.router.navigate(['/login'])
     }
 

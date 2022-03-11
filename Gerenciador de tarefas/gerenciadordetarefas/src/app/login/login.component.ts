@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       console.log(environment.foto)
       console.log(environment.id)
 
-      this.router.navigate(['/dashboard'])
+      this.router.navigate(['/menu'])
 
     },erro=>{
       if(erro.status ==500){
