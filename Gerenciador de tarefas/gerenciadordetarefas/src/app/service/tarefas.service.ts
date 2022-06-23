@@ -16,11 +16,11 @@ export class TarefasService {
   }
 
   getAllTarefas():Observable<Tarefas[]>{
-    return this.http.get<Tarefas[]>('http://localhost:8080/tarefas'+this.token)
+    return this.http.get<Tarefas[]>('http://localhost:8080/tarefas')
   }
 
-  postTarefas():Observable<Tarefas>{
-    return this.http.get<Tarefas>('http://localhost:8080/tarefas'+Tarefas+this.token)
+  postTarefas(tarefa: Tarefas):Observable<Tarefas>{
+    return this.http.post<Tarefas>('http://localhost:8080/tarefas',tarefa)
   }
   
 }

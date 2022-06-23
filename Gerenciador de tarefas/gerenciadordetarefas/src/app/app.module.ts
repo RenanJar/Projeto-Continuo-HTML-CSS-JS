@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -13,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { StatusComponent } from './status/status.component';
+import { StatusEditComponent } from './edit/status-edit/status-edit.component';
+import { StatusDeleteComponent } from './delete/status-delete/status-delete.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { StatusComponent } from './status/status.component';
     LoginComponent,
     CadastroComponent,
     DashboardComponent,
-    StatusComponent
+    StatusComponent,
+    StatusEditComponent,
+    StatusDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,10 +34,9 @@ import { StatusComponent } from './status/status.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [{
-    provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
+  providers: [{provide: LocationStrategy,useClass: HashLocationStrategy}
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -31,4 +31,12 @@ export class AuthService {
 
     return ok
   }
+
+  getAuthorizationToken(){
+    const token = window.localStorage.getItem('token')
+    return token;
+  }
+
+  
+
 }
